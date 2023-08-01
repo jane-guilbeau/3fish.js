@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>So long, and thanks for all the fish!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div>
+      <button id="info">Info</button>
+      <button id="mute">Mute</button>
+      <audio autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <canvas width="624" height="448"></canvas>
+
+    <script>
+      const info = document.getElementById('info');
+      const mute = document.getElementById('mute');
+      const audio = document.querySelector('audio');
+
+      info.onclick = () => {
+        alert('Original Windows 3.1 shareware created by Dave Crawford\n\n' +
+        'Gymnopedie no. 1 composed by Erik Satie\n\n' +
+        '3fish originally paired with song by Tumblr user ulan-bator\n\n' +
+        'Recreated in JavaScript by Jane Guilbeau\n\n' +
+        'Try resizing the window or zooming in and out!')
+      };
+
+      mute.onclick = () => {
+        audio.muted = !audio.muted;
+        audio.muted ? mute.textContent = "Unmute" : mute.textContent = "Mute";
+      }
+    </script>
+    <script src="3fish.js"></script>
+  </body>
+</html>
