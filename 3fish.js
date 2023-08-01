@@ -1,21 +1,21 @@
 // import sprites
 const fish1 = new Image();
-fish1.src = 'images/fish1.png';
+fish1.src = 'assets/fish1.png';
 const fish1r = new Image();
-fish1r.src = 'images/fish1r.png';
+fish1r.src = 'assets/fish1r.png';
 
 const fish2 = new Image();
-fish2.src = 'images/fish2.png';
+fish2.src = 'assets/fish2.png';
 const fish2r = new Image();
-fish2r.src = 'images/fish2r.png';
+fish2r.src = 'assets/fish2r.png';
 
 const fish3 = new Image();
-fish3.src = 'images/fish3.png';
+fish3.src = 'assets/fish3.png';
 const fish3r = new Image();
-fish3r.src = 'images/fish3r.png';
+fish3r.src = 'assets/fish3r.png';
 
 const bg = new Image();
-bg.src = 'images/bg.png';
+bg.src = 'assets/bg.png';
 
 // setup canvas
 const canvas = document.querySelector('canvas');
@@ -23,7 +23,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = bg.naturalWidth;
 canvas.height = bg.naturalHeight;
 
-// scale canvas
+// scale canvas by increasing css canvas dimensions and leaving html canvas dimensions the same
 const globalScale = 4; 
 canvas.style.width = `${canvas.getAttribute('width') * globalScale}px`;
 canvas.style.height = `${canvas.getAttribute('height') * globalScale}px`;
